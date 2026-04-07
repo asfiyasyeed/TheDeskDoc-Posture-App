@@ -19,28 +19,24 @@ st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap');
 
-/* Base font */
+/* Base */
 html, body, [class*="css"] {
     font-family: 'DM Sans', sans-serif;
+    background-color: #121212 !important;
+    color: #E0E0E0 !important;
 }
 
-/* ── Sidebar ── */
+/* Sidebar */
 [data-testid="stSidebar"] {
-    background-color: #f4f3ef !important;
-    border-right: 1px solid #e5e3dc;
+    background-color: #1E1E1E !important;
+    border-right: 1px solid #2A2A2A;
 }
-[data-testid="stSidebar"] > div:first-child {
-    padding: 1.5rem 1.25rem;
+[data-testid="stSidebar"] * {
+    color: #A0A0A0 !important;
 }
 
-/* Hide default sidebar header padding */
-[data-testid="stSidebarHeader"] { display: none; }
-
-/* ── Sliders ── */
+/* Sliders */
 [data-testid="stSlider"] > div > div > div {
-    background: #1D9E75 !important;
-}
-[data-testid="stSlider"] .st-emotion-cache-1gv3huu {
     background: #1D9E75 !important;
 }
 div[data-baseweb="slider"] div[role="slider"] {
@@ -48,181 +44,52 @@ div[data-baseweb="slider"] div[role="slider"] {
     border-color: #1D9E75 !important;
 }
 
-/* ── Radio buttons → pill style ── */
-[data-testid="stRadio"] > label { display: none; }
+/* Radio */
 [data-testid="stRadio"] > div {
-    display: flex;
-    gap: 6px;
-    flex-direction: row !important;
-    background: #ebe9e3;
-    border-radius: 10px;
-    padding: 4px;
+    background: #2A2A2A;
 }
 [data-testid="stRadio"] > div > label {
-    flex: 1;
-    text-align: center;
-    padding: 6px 0;
-    border-radius: 7px;
-    font-size: 13px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.15s;
-    color: #6b6b5e;
+    color: #A0A0A0;
 }
 [data-testid="stRadio"] > div > label:has(input:checked) {
-    background: white;
-    color: #1a1a16;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    background: #3A3A3A;
+    color: #FFFFFF;
 }
-[data-testid="stRadio"] > div > label > div:first-child { display: none; }
 
-/* ── Metric cards ── */
+/* Metric cards */
 [data-testid="stMetric"] {
-    background: #f4f3ef;
-    border-radius: 12px;
-    padding: 14px 16px;
-    border: 1px solid #e5e3dc;
-}
-[data-testid="stMetric"] label {
-    font-size: 11px !important;
-    font-weight: 500 !important;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #9b9b8a !important;
+    background: #1E1E1E;
+    border: 1px solid #2A2A2A;
 }
 [data-testid="stMetricValue"] {
-    font-size: 26px !important;
-    font-weight: 400 !important;
-    font-family: 'DM Mono', monospace !important;
-    color: #1a1a16 !important;
+    color: #E0E0E0 !important;
 }
-[data-testid="stMetricDelta"] { font-size: 12px !important; }
 
-/* ── Expander ── */
+/* Expanders */
 [data-testid="stExpander"] {
-    border: 1px solid #e5e3dc !important;
-    border-radius: 10px !important;
-    background: white;
+    background: #1E1E1E;
+    border: 1px solid #2A2A2A;
 }
 [data-testid="stExpander"] summary {
-    font-size: 13px;
-    font-weight: 500;
-    color: #4a4a3f;
+    color: #E0E0E0;
 }
 
-/* ── Main content area ── */
-.main .block-container {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    max-width: 900px;
-}
-
-/* ── Alert banner ── */
-.alert-banner {
-    background: #FFF3EE;
-    border: 1px solid #F0997B;
-    border-left: 4px solid #D85A30;
-    border-radius: 10px;
-    padding: 12px 16px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #993C1D;
-    margin-bottom: 1rem;
-}
-.good-banner {
-    background: #E1F5EE;
-    border: 1px solid #5DCAA5;
-    border-left: 4px solid #1D9E75;
-    border-radius: 10px;
-    padding: 12px 16px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #0F6E56;
-    margin-bottom: 1rem;
-}
-
-/* ── Divider ── */
-hr {
-    border: none;
-    border-top: 1px solid #e5e3dc;
-    margin: 1rem 0;
-}
-
-/* ── Section headers ── */
+/* Labels */
 .section-label {
-    font-size: 10px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: #9b9b8a;
-    margin-bottom: 8px;
-    margin-top: 4px;
+    color: #A0A0A0;
 }
 
-/* ── Status pill ── */
-.status-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 4px 12px;
-    border-radius: 99px;
-    font-size: 12px;
-    font-weight: 500;
-}
-.status-good { background: #E1F5EE; color: #0F6E56; }
-.status-bad  { background: #FAECE7; color: #993C1D; }
-.status-idle { background: #f4f3ef; color: #6b6b5e; }
-
-/* ── Calibration tip steps ── */
-.tip-step {
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
-    font-size: 13px;
-    color: #4a4a3f;
-    margin-bottom: 8px;
-    line-height: 1.5;
-}
-.tip-num {
-    min-width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #E1F5EE;
-    color: #0F6E56;
-    font-size: 11px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    margin-top: 1px;
+/* Divider */
+hr {
+    border-top: 1px solid #2A2A2A;
 }
 
-/* ── Brand header ── */
-.brand-block {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #e5e3dc;
-}
-.brand-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #1D9E75;
-    flex-shrink: 0;
-}
+/* Brand */
 .brand-name {
-    font-size: 15px;
-    font-weight: 500;
-    color: #1a1a16;
-    letter-spacing: -0.01em;
+    color: #E0E0E0;
 }
 .brand-sub {
-    font-size: 11px;
-    color: #9b9b8a;
+    color: #A0A0A0;
 }
 </style>
 """, unsafe_allow_html=True)
